@@ -1,0 +1,60 @@
+{
+  "name": "[projecthub].[sp_GetAllClients]",
+  "title": "[projecthub].[sp_GetAllClients]",
+  "schema": {
+    "inputparameters": {
+      "type": "object",
+      "x-ms-visibility": "internal",
+      "default": {}
+    },
+    "type": "object",
+    "procedureresultschema": {
+      "type": "object",
+      "properties": {
+        "returncode": {
+          "title": "ReturnCode",
+          "type": "integer"
+        },
+        "outputparameters": {
+          "title": "OutputParameters",
+          "type": "object"
+        },
+        "resultsets": {
+          "title": "ResultSets",
+          "type": "object",
+          "properties": {
+            "Table1": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "Id": {
+                    "title": "Id",
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Name": {
+                    "title": "Name",
+                    "type": "string"
+                  },
+                  "ContactPerson": {
+                    "title": "ContactPerson",
+                    "type": "string"
+                  },
+                  "Email": {
+                    "title": "Email",
+                    "type": "string"
+                  },
+                  "Status": {
+                    "title": "Status",
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

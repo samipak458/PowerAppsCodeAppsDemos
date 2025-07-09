@@ -1,0 +1,62 @@
+/* SVAR Gantt Chart Styling - Official themes and container layout */
+
+/* Base container styling */
+.gantt-container {
+  height: 100%;
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Ensure Gantt chart fills all available space */
+.gantt-container > div {
+  height: 100%;
+  width: 100%;
+}
+
+/* Ensure proper sizing for SVAR Gantt components */
+.gantt-container .wx-gantt {
+  height: 100% !important;
+  width: 100% !important;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+/* Ensure proper sizing for all inner elements */
+.gantt-container .wx-gantt > div {
+  height: 100% !important;
+  width: 100% !important;
+  overflow: hidden;
+}
+
+/* Ensure SVAR theme wrappers fill container */
+.gantt-container .wx-willow-theme,
+.gantt-container .wx-willow-dark-theme {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Override any conflicting styles for theme wrappers */
+.gantt-container .wx-willow-theme > div,
+.gantt-container .wx-willow-dark-theme > div {
+  height: 100%;
+  width: 100%;
+  flex: 1;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .gantt-container {
+    min-height: 350px;
+    font-size: 13px;
+  }
+  
+  .gantt-container .wx-gantt {
+    font-size: 13px;
+  }
+}

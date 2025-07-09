@@ -1,0 +1,169 @@
+{
+  "name": "[projecthub].[sp_SearchClients]",
+  "title": "[projecthub].[sp_SearchClients]",
+  "schema": {
+    "inputparameters": {
+      "type": "object",
+      "properties": {
+        "CompanyFilter": {
+          "title": "CompanyFilter",
+          "type": "string",
+          "maxLength": 255,
+          "x-ms-sql-max-length": "255"
+        },
+        "PageNumber": {
+          "title": "PageNumber",
+          "type": "integer"
+        },
+        "PageSize": {
+          "title": "PageSize",
+          "type": "integer"
+        },
+        "SearchTerm": {
+          "title": "SearchTerm",
+          "type": "string",
+          "maxLength": 255,
+          "x-ms-sql-max-length": "255"
+        },
+        "SortColumn": {
+          "title": "SortColumn",
+          "type": "string",
+          "maxLength": 50,
+          "x-ms-sql-max-length": "50"
+        },
+        "SortDirection": {
+          "title": "SortDirection",
+          "type": "string",
+          "maxLength": 4,
+          "x-ms-sql-max-length": "4"
+        },
+        "Status": {
+          "title": "Status",
+          "type": "string",
+          "maxLength": 20,
+          "x-ms-sql-max-length": "20"
+        },
+        "TotalRecords": {
+          "title": "TotalRecords",
+          "type": "integer"
+        }
+      }
+    },
+    "outputparameters": {
+      "title": "OutputParameters",
+      "type": "object",
+      "properties": {
+        "TotalRecords": {
+          "title": "TotalRecords",
+          "type": "integer"
+        }
+      }
+    },
+    "type": "object",
+    "procedureresultschema": {
+      "type": "object",
+      "properties": {
+        "returncode": {
+          "title": "ReturnCode",
+          "type": "integer"
+        },
+        "outputparameters": {
+          "title": "OutputParameters",
+          "type": "object",
+          "properties": {
+            "TotalRecords": {
+              "title": "TotalRecords",
+              "type": "integer"
+            }
+          }
+        },
+        "resultsets": {
+          "title": "ResultSets",
+          "type": "object",
+          "properties": {
+            "Table1": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "Id": {
+                    "title": "Id",
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Name": {
+                    "title": "Name",
+                    "type": "string"
+                  },
+                  "ContactPerson": {
+                    "title": "ContactPerson",
+                    "type": "string"
+                  },
+                  "Email": {
+                    "title": "Email",
+                    "type": "string"
+                  },
+                  "Phone": {
+                    "title": "Phone",
+                    "type": "string"
+                  },
+                  "Company": {
+                    "title": "Company",
+                    "type": "string"
+                  },
+                  "Address": {
+                    "title": "Address",
+                    "type": "string"
+                  },
+                  "City": {
+                    "title": "City",
+                    "type": "string"
+                  },
+                  "State": {
+                    "title": "State",
+                    "type": "string"
+                  },
+                  "ZipCode": {
+                    "title": "ZipCode",
+                    "type": "string"
+                  },
+                  "Country": {
+                    "title": "Country",
+                    "type": "string"
+                  },
+                  "Industry": {
+                    "title": "Industry",
+                    "type": "string"
+                  },
+                  "Notes": {
+                    "title": "Notes",
+                    "type": "string"
+                  },
+                  "Status": {
+                    "title": "Status",
+                    "type": "string"
+                  },
+                  "CreatedDate": {
+                    "title": "CreatedDate",
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "LastModified": {
+                    "title": "LastModified",
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "ProjectCount": {
+                    "title": "ProjectCount",
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

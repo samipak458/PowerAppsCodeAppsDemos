@@ -1,0 +1,69 @@
+{
+  "name": "[projecthub].[sp_GetDashboardStats]",
+  "title": "[projecthub].[sp_GetDashboardStats]",
+  "schema": {
+    "inputparameters": {
+      "type": "object",
+      "x-ms-visibility": "internal",
+      "default": {}
+    },
+    "type": "object",
+    "procedureresultschema": {
+      "type": "object",
+      "properties": {
+        "returncode": {
+          "title": "ReturnCode",
+          "type": "integer"
+        },
+        "outputparameters": {
+          "title": "OutputParameters",
+          "type": "object"
+        },
+        "resultsets": {
+          "title": "ResultSets",
+          "type": "object",
+          "properties": {
+            "Table1": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "ActiveClients": {
+                    "title": "ActiveClients",
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "ActiveProjects": {
+                    "title": "ActiveProjects",
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "PendingTasks": {
+                    "title": "PendingTasks",
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "CompletedTasks": {
+                    "title": "CompletedTasks",
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "AverageProjectProgress": {
+                    "title": "AverageProjectProgress",
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "TotalActiveBudget": {
+                    "title": "TotalActiveBudget",
+                    "type": "number",
+                    "format": "double"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
