@@ -1,0 +1,162 @@
+{
+  "name": "[projecthub].[sp_CreateProject]",
+  "title": "[projecthub].[sp_CreateProject]",
+  "schema": {
+    "inputparameters": {
+      "type": "object",
+      "properties": {
+        "Budget": {
+          "title": "Budget",
+          "type": "number"
+        },
+        "ClientId": {
+          "title": "ClientId",
+          "type": "integer"
+        },
+        "Description": {
+          "title": "Description",
+          "type": "string",
+          "x-ms-sql-max-length": "-1"
+        },
+        "EndDate": {
+          "title": "EndDate",
+          "type": "string"
+        },
+        "EstimatedHours": {
+          "title": "EstimatedHours",
+          "type": "number"
+        },
+        "Name": {
+          "title": "Name",
+          "type": "string",
+          "maxLength": 255,
+          "x-ms-sql-max-length": "255"
+        },
+        "Priority": {
+          "title": "Priority",
+          "type": "string",
+          "maxLength": 20,
+          "x-ms-sql-max-length": "20"
+        },
+        "StartDate": {
+          "title": "StartDate",
+          "type": "string"
+        },
+        "Status": {
+          "title": "Status",
+          "type": "string",
+          "maxLength": 20,
+          "x-ms-sql-max-length": "20"
+        }
+      }
+    },
+    "type": "object",
+    "procedureresultschema": {
+      "type": "object",
+      "properties": {
+        "returncode": {
+          "title": "ReturnCode",
+          "type": "integer"
+        },
+        "outputparameters": {
+          "title": "OutputParameters",
+          "type": "object"
+        },
+        "resultsets": {
+          "title": "ResultSets",
+          "type": "object",
+          "properties": {
+            "Table1": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "Id": {
+                    "title": "Id",
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Name": {
+                    "title": "Name",
+                    "type": "string"
+                  },
+                  "Description": {
+                    "title": "Description",
+                    "type": "string"
+                  },
+                  "ClientId": {
+                    "title": "ClientId",
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "ClientName": {
+                    "title": "ClientName",
+                    "type": "string"
+                  },
+                  "Status": {
+                    "title": "Status",
+                    "type": "string"
+                  },
+                  "Priority": {
+                    "title": "Priority",
+                    "type": "string"
+                  },
+                  "StartDate": {
+                    "title": "StartDate",
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "EndDate": {
+                    "title": "EndDate",
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "EstimatedHours": {
+                    "title": "EstimatedHours",
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "ActualHours": {
+                    "title": "ActualHours",
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "Budget": {
+                    "title": "Budget",
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "Progress": {
+                    "title": "Progress",
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "CreatedDate": {
+                    "title": "CreatedDate",
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "LastModified": {
+                    "title": "LastModified",
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "TaskCount": {
+                    "title": "TaskCount",
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "CompletedTaskCount": {
+                    "title": "CompletedTaskCount",
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

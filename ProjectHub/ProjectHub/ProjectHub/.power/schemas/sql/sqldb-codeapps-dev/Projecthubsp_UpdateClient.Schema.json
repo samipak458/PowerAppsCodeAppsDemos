@@ -1,0 +1,192 @@
+{
+  "name": "[projecthub].[sp_UpdateClient]",
+  "title": "[projecthub].[sp_UpdateClient]",
+  "schema": {
+    "inputparameters": {
+      "type": "object",
+      "properties": {
+        "Address": {
+          "title": "Address",
+          "type": "string",
+          "maxLength": 500,
+          "x-ms-sql-max-length": "500"
+        },
+        "City": {
+          "title": "City",
+          "type": "string",
+          "maxLength": 100,
+          "x-ms-sql-max-length": "100"
+        },
+        "Company": {
+          "title": "Company",
+          "type": "string",
+          "maxLength": 255,
+          "x-ms-sql-max-length": "255"
+        },
+        "ContactPerson": {
+          "title": "ContactPerson",
+          "type": "string",
+          "maxLength": 255,
+          "x-ms-sql-max-length": "255"
+        },
+        "Country": {
+          "title": "Country",
+          "type": "string",
+          "maxLength": 100,
+          "x-ms-sql-max-length": "100"
+        },
+        "Email": {
+          "title": "Email",
+          "type": "string",
+          "maxLength": 255,
+          "x-ms-sql-max-length": "255"
+        },
+        "Id": {
+          "title": "Id",
+          "type": "integer"
+        },
+        "Industry": {
+          "title": "Industry",
+          "type": "string",
+          "maxLength": 100,
+          "x-ms-sql-max-length": "100"
+        },
+        "Name": {
+          "title": "Name",
+          "type": "string",
+          "maxLength": 255,
+          "x-ms-sql-max-length": "255"
+        },
+        "Notes": {
+          "title": "Notes",
+          "type": "string",
+          "x-ms-sql-max-length": "-1"
+        },
+        "Phone": {
+          "title": "Phone",
+          "type": "string",
+          "maxLength": 50,
+          "x-ms-sql-max-length": "50"
+        },
+        "State": {
+          "title": "State",
+          "type": "string",
+          "maxLength": 50,
+          "x-ms-sql-max-length": "50"
+        },
+        "Status": {
+          "title": "Status",
+          "type": "string",
+          "maxLength": 20,
+          "x-ms-sql-max-length": "20"
+        },
+        "ZipCode": {
+          "title": "ZipCode",
+          "type": "string",
+          "maxLength": 20,
+          "x-ms-sql-max-length": "20"
+        }
+      }
+    },
+    "type": "object",
+    "procedureresultschema": {
+      "type": "object",
+      "properties": {
+        "returncode": {
+          "title": "ReturnCode",
+          "type": "integer"
+        },
+        "outputparameters": {
+          "title": "OutputParameters",
+          "type": "object"
+        },
+        "resultsets": {
+          "title": "ResultSets",
+          "type": "object",
+          "properties": {
+            "Table1": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "Id": {
+                    "title": "Id",
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Name": {
+                    "title": "Name",
+                    "type": "string"
+                  },
+                  "ContactPerson": {
+                    "title": "ContactPerson",
+                    "type": "string"
+                  },
+                  "Email": {
+                    "title": "Email",
+                    "type": "string"
+                  },
+                  "Phone": {
+                    "title": "Phone",
+                    "type": "string"
+                  },
+                  "Company": {
+                    "title": "Company",
+                    "type": "string"
+                  },
+                  "Address": {
+                    "title": "Address",
+                    "type": "string"
+                  },
+                  "City": {
+                    "title": "City",
+                    "type": "string"
+                  },
+                  "State": {
+                    "title": "State",
+                    "type": "string"
+                  },
+                  "ZipCode": {
+                    "title": "ZipCode",
+                    "type": "string"
+                  },
+                  "Country": {
+                    "title": "Country",
+                    "type": "string"
+                  },
+                  "Industry": {
+                    "title": "Industry",
+                    "type": "string"
+                  },
+                  "Notes": {
+                    "title": "Notes",
+                    "type": "string"
+                  },
+                  "Status": {
+                    "title": "Status",
+                    "type": "string"
+                  },
+                  "CreatedDate": {
+                    "title": "CreatedDate",
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "LastModified": {
+                    "title": "LastModified",
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "ProjectCount": {
+                    "title": "ProjectCount",
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

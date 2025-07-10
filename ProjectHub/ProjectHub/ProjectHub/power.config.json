@@ -1,0 +1,38 @@
+{
+  "appId": "YOUR_APP_ID_HERE",
+  "appDisplayName": "ProjectHub",
+  "description": null,
+  "environmentId": "YOUR_ENVIRONMENT_ID_HERE",
+  "buildPath": "./dist",
+  "buildEntryPoint": "index.html",
+  "logoPath": "./public/vite.svg",
+  "localAppUrl": "http://localhost:3000/",
+  "connectionReferences": {
+    "YOUR_OFFICE365_CONNECTION_REFERENCE_ID": {
+      "id": "/providers/Microsoft.PowerApps/apis/shared_office365users",
+      "displayName": "Office 365 Users",
+      "dataSources": [
+        "office365users"
+      ],
+      "authenticationType": null,
+      "sharedConnectionId": null,
+      "dataSets": {}
+    },
+    "YOUR_SQL_CONNECTION_REFERENCE_ID": {
+      "id": "/providers/Microsoft.PowerApps/apis/shared_sql",
+      "displayName": "SQL Server",
+      "dataSources": [
+        "YOUR_DATABASE_NAME"
+      ],
+      "authenticationType": "oauth",
+      "sharedConnectionId": "/providers/Microsoft.PowerApps/apis/shared_sql/connections/YOUR_SQL_CONNECTION_ID",
+      "dataSets": {
+        "YOUR_SERVER_NAME.database.windows.net,YOUR_DATABASE_NAME": {
+          "dataSources": {
+            "YOUR_DATABASE_NAME": {}
+          }
+        }
+      }
+    }
+  }
+}

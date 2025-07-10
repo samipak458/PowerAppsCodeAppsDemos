@@ -1,0 +1,115 @@
+{
+  "name": "[projecthub].[sp_GetClientById]",
+  "title": "[projecthub].[sp_GetClientById]",
+  "schema": {
+    "inputparameters": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "title": "Id",
+          "type": "integer"
+        }
+      }
+    },
+    "type": "object",
+    "procedureresultschema": {
+      "type": "object",
+      "properties": {
+        "returncode": {
+          "title": "ReturnCode",
+          "type": "integer"
+        },
+        "outputparameters": {
+          "title": "OutputParameters",
+          "type": "object"
+        },
+        "resultsets": {
+          "title": "ResultSets",
+          "type": "object",
+          "properties": {
+            "Table1": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "Id": {
+                    "title": "Id",
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Name": {
+                    "title": "Name",
+                    "type": "string"
+                  },
+                  "ContactPerson": {
+                    "title": "ContactPerson",
+                    "type": "string"
+                  },
+                  "Email": {
+                    "title": "Email",
+                    "type": "string"
+                  },
+                  "Phone": {
+                    "title": "Phone",
+                    "type": "string"
+                  },
+                  "Company": {
+                    "title": "Company",
+                    "type": "string"
+                  },
+                  "Address": {
+                    "title": "Address",
+                    "type": "string"
+                  },
+                  "City": {
+                    "title": "City",
+                    "type": "string"
+                  },
+                  "State": {
+                    "title": "State",
+                    "type": "string"
+                  },
+                  "ZipCode": {
+                    "title": "ZipCode",
+                    "type": "string"
+                  },
+                  "Country": {
+                    "title": "Country",
+                    "type": "string"
+                  },
+                  "Industry": {
+                    "title": "Industry",
+                    "type": "string"
+                  },
+                  "Notes": {
+                    "title": "Notes",
+                    "type": "string"
+                  },
+                  "Status": {
+                    "title": "Status",
+                    "type": "string"
+                  },
+                  "CreatedDate": {
+                    "title": "CreatedDate",
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "LastModified": {
+                    "title": "LastModified",
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "ProjectCount": {
+                    "title": "ProjectCount",
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

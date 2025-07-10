@@ -1,0 +1,141 @@
+{
+  "name": "[projecthub].[sp_GetTaskById]",
+  "title": "[projecthub].[sp_GetTaskById]",
+  "schema": {
+    "inputparameters": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "title": "Id",
+          "type": "integer"
+        }
+      }
+    },
+    "type": "object",
+    "procedureresultschema": {
+      "type": "object",
+      "properties": {
+        "returncode": {
+          "title": "ReturnCode",
+          "type": "integer"
+        },
+        "outputparameters": {
+          "title": "OutputParameters",
+          "type": "object"
+        },
+        "resultsets": {
+          "title": "ResultSets",
+          "type": "object",
+          "properties": {
+            "Table1": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "Id": {
+                    "title": "Id",
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Title": {
+                    "title": "Title",
+                    "type": "string"
+                  },
+                  "Description": {
+                    "title": "Description",
+                    "type": "string"
+                  },
+                  "ProjectId": {
+                    "title": "ProjectId",
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "ProjectName": {
+                    "title": "ProjectName",
+                    "type": "string"
+                  },
+                  "ParentTaskId": {
+                    "title": "ParentTaskId",
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "PredecessorIds": {
+                    "title": "PredecessorIds",
+                    "type": "string"
+                  },
+                  "AssignedTo": {
+                    "title": "AssignedTo",
+                    "type": "string"
+                  },
+                  "Status": {
+                    "title": "Status",
+                    "type": "string"
+                  },
+                  "Priority": {
+                    "title": "Priority",
+                    "type": "string"
+                  },
+                  "StartDate": {
+                    "title": "StartDate",
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "EndDate": {
+                    "title": "EndDate",
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "DueDate": {
+                    "title": "DueDate",
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "EstimatedHours": {
+                    "title": "EstimatedHours",
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "ActualHours": {
+                    "title": "ActualHours",
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "Progress": {
+                    "title": "Progress",
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "TaskOrder": {
+                    "title": "TaskOrder",
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "CreatedDate": {
+                    "title": "CreatedDate",
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "LastModified": {
+                    "title": "LastModified",
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "HasChildren": {
+                    "title": "HasChildren",
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Level": {
+                    "title": "Level",
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

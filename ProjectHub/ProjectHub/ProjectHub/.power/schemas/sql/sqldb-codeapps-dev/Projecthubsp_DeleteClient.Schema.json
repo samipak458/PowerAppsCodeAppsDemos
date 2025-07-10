@@ -1,0 +1,48 @@
+{
+  "name": "[projecthub].[sp_DeleteClient]",
+  "title": "[projecthub].[sp_DeleteClient]",
+  "schema": {
+    "inputparameters": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "title": "Id",
+          "type": "integer"
+        }
+      }
+    },
+    "type": "object",
+    "procedureresultschema": {
+      "type": "object",
+      "properties": {
+        "returncode": {
+          "title": "ReturnCode",
+          "type": "integer"
+        },
+        "outputparameters": {
+          "title": "OutputParameters",
+          "type": "object"
+        },
+        "resultsets": {
+          "title": "ResultSets",
+          "type": "object",
+          "properties": {
+            "Table1": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "DeletedRows": {
+                    "title": "DeletedRows",
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
