@@ -240,12 +240,8 @@ function App() {
 6. **Accessibility**: Implement proper ARIA labels and keyboard navigation
 
 ### Reference Documentation
-- [Fluent UI DataGrid Documentation](
-  https://fluentuipr.z22.web.core.windows.net/heads/master/
-  public-docsite-v9/storybook/?path=/docs/components-datagrid--default)
-- [Resizable Columns Example](
-  https://github.com/microsoft/fluentui/blob/938a069ea4e0c460050e0dc147b9786e144cb6d3/
-  packages/react-components/react-table/stories/src/DataGrid/ResizableColumns.stories.tsx)
+- [Fluent UI DataGrid Documentation](https://fluentuipr.z22.web.core.windows.net/heads/master/public-docsite-v9/storybook/?path=/docs/components-datagrid--default)
+- [Resizable Columns Example](https://github.com/microsoft/fluentui/blob/938a069ea4e0c460050e0dc147b9786e144cb6d3/packages/react-components/react-table/stories/src/DataGrid/ResizableColumns.stories.tsx)
 
 ### Common Implementation Patterns
 - Use `makeStyles` for consistent styling with design tokens
